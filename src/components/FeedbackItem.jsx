@@ -2,11 +2,7 @@ import { FaTimes } from 'react-icons/fa';
 import Card from './shared/Card';
 import PropTypes from 'prop-types';
 
-function FeedbackItem({ item , handleDelete }) {
-
-
-
-
+function FeedbackItem({ item, handleDelete }) {
   return (
     <Card>
       <div className="num-display">{item.rating}</div>
