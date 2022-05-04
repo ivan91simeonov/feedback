@@ -1,7 +1,10 @@
 import FeedbackItem from './FeedbackItem';
-import PropTypes from 'prop-types';
+import { useContext } from 'react';
+import FeedbackContext from '../context/FeedbackContext';
 
-function FeedbackList({ feedback, handleDelete }) {
+function FeedbackList({ handleDelete }) {
+  const { feedback } = useContext(FeedbackContext);
+
   if (!feedback || feedback.length === 0) {
     return <p>No Feedback Yet</p>;
   }
@@ -14,9 +17,5 @@ function FeedbackList({ feedback, handleDelete }) {
     </div>
   );
 }
-
-// FeedbackList.propTypes = {s
-//   feedback: PropTypes.array
-// };
 
 export default FeedbackList;
